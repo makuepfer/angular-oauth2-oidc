@@ -5,8 +5,14 @@
 /tmp
 /out-tsc
 
+# TypeScript
+src/*.js
+src/*.map
+src/*.d.ts
+
 # dependencies
 /node_modules
+npm-debug.log
 
 # IDEs and editors
 /.idea
@@ -36,4 +42,7 @@ testem.log
 
 # System Files
 .DS_Store
-Thumbs.db
+**/.DS_Store
+
+# Ngc generated files
+**/*.ngfactory.ts
