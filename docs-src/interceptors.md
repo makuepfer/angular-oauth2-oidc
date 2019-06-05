@@ -76,7 +76,9 @@ export class DefaultOAuthInterceptor implements HttpInterceptor {
             req = req.clone({ headers });
         }
 
-        return next.handle(req).catch(err => this.errorHandler.handleError(err));
+        return next.handle(req).pipe(
+            catchError(err => this.errorHandler.handleError(err))
+        );
 
     }
 
